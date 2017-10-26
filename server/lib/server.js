@@ -1,17 +1,23 @@
 import express from 'express';
+import logger from 'morgan';
+
 
 const app = express();
+app.use(logger('dev'));
+app.post('/', (req, res) => {
+  res.send('Got a POST request');
+});
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-app.post('/', (req, res) => {
-  res.send('Got a POST request');
-});
-
 app.put('/user', (req, res) => {
   res.send('Got a PUT request at /user');
+});  
+
+app.get('/about', (req, res) => {
+  res.send('about');
 });
 
 app.delete('/user', (req, res) => {

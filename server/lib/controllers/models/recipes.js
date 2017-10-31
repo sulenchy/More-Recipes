@@ -6,6 +6,7 @@ const RecipeSchema = [
     upVote: 20,
     downVote: 3,
     userId: 100,
+    imageUrl: 'image1.jpg',
     dateAdded: '12/2/2013',
   },
   {
@@ -15,6 +16,7 @@ const RecipeSchema = [
     upVote: 50,
     downVote: 3,
     userId: 100,
+    imageUrl: 'image2.jpg',
     dateAdded: '12/2/2013',
   },
   {
@@ -24,6 +26,7 @@ const RecipeSchema = [
     upVote: 10,
     downVote: 3,
     userId: 100,
+    imageUrl: 'image3.jpg',
     dateAdded: '12/2/2013',
   },
 ];

@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import recipe from '../lib/controllers/routes/recipes';
+import review from '../lib/controllers/routes/reviews';
 import config from 'config';
 
 
@@ -29,8 +30,12 @@ app.route('/api/v1/Recipe/:id')
   .get(recipe.getRecipe)
   .delete(recipe.deleteRecipe)
   .put(recipe.updateRecipe);
+app.route('/api/v1/recipes/:id/reviews')
+  .post(review.postReview);
+app.route('/api/v1/reviews')
+  .get(review.getReviews);
 
 app.listen(8080);
 console.log(`Listening on port ${8080}`);
 
-export default app ;// for testing
+export default app;// for testing

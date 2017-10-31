@@ -4,7 +4,7 @@
   "description": "",
   "main": "lib/server.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register ./lib/test/**/*.js --timeout 10000",
+    "test": "mocha --compilers js:babel-core/register ./lib/test/**/*.js --exit --timeout 10000",
     "start": "nodemon lib/server.js --exec babel-node",
     "build": "babel lib -d dist",
     "serve": "node dist/server.js",

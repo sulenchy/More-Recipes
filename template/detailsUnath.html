@@ -10,115 +10,84 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-      <header style="margin-bottom: 80px">
-            <!--Navbar starts here-->
-            <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                      <img src="https://dcassetcdn.com/design_img/10150/1674/1674_291334_10150_thumbnail.jpg" height="60px" class="img-responsive align-top" alt="">
+        <header style="margin-bottom: 80px">
+                <!--Navbar starts here-->
+                <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                          <img src="https://dcassetcdn.com/design_img/10150/1674/1674_291334_10150_thumbnail.jpg" height="60px" class="img-responsive align-top" alt="">
+                          
+                        </a>
                       
-                    </a>
-                  
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="login.html">Login</a>
-                        </li>
-                      </ul>
-                      <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search for recipes">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                      </form>
-                    </div>
-                  </nav>
-      </header>
-      <section class="container" style="margin-top:10px">
-          
-          <div class="row">
-            <div class="col-md-9">
-                <h2>Catalog</h2>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="login.html">Login</a>
+                            </li>
+                          </ul>
+                          <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search for recipes">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                          </form>
+                        </div>
+                      </nav>
+          </header>
+    <section class="container" style="margin-top:10px">
+        <div class="row col-md-12">
+                
+            <div class="col-md-8" style="margin-top:50px">
+                <h2>Details</h2>
                 <div class="card-deck">
-                    <div class="card col-md-4">
+                    <div class="card col-md-12">
                       <img class="card-img-top" height="300px" width="100%" src="data:image/jpeg;base64,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" alt="Card image cap">
                       <div class="card-block">
                         <h4 class="card-title">Card title</h4>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                       </div>
                       <div class="card-footer">
-                        <div class="col-md-8"><small class="text-muted">Last updated 3 mins ago </small></div>
-                        <div class="col-md-4"><a class="btn btn-primary" href="detailsUnath.html" role="button">Read</a></div>
-                        
+                        <small class="text-muted">Last updated 3 mins ago</small>
                       </div>
                     </div>
-                    <div class="card col-md-4">
-                      <img class="card-img-top" height="300px" width="100%" src="http://cdn1.foodviva.com/static-content/food-images/curry-recipes/paneer-butter-masala-recipe/paneer-butter-masala-recipe.jpg" alt="Card image cap">
-                      <div class="card-block">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                      <div class="card-footer">
-                          <div class="col-md-8"><small class="text-muted">Last updated 3 mins ago </small></div>
-                          <div class="col-md-4"><a class="btn btn-primary" href="detailsUnath.html" role="button">Read</a></div>
-                          
-                        </div>
-                    </div>
-                    <div class="card col-md-4">
-                      <img class="card-img-top" height="300px" width="100%" src="http://www.indianfoodforever.com/images/rainy-recipes.jpg" alt="Card image cap">
-                      <div class="card-block">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                      </div>
-                      <div class="card-footer">
-                          <div class="col-md-8"><small class="text-muted">Last updated 3 mins ago </small></div>
-                          <div class="col-md-4"><a class="btn btn-primary" href="detailsUnath.html" role="button">Read</a></div>
-                          
-                        </div>
-                    </div>
-                  </div>
+                </div> 
             </div>
-            <div class="col-md-3">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-1"></div>
-                  <div class="col-md-11">
-                      <h2>Favorited</h2>
-                      <div class="card" style="margin-bottom:5px">
-                          <div class="card-header">
-                            <a href="details.html">Recipe one</a>
-                          </div>
-                          <div class="card-block">
-                            <blockquote class="card-blockquote">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                              <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                            </blockquote>
-                          </div>
-                        </div>
-                        <div class="card" style="margin-bottom:5px">
-                            <div class="card-header">
-                                <a href="details.html">Recipe two</a>
-                            </div>
-                            <div class="card-block">
-                              <blockquote class="card-blockquote">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                              </blockquote>
-                            </div>
-                          </div>
-                  </div>
-                    
+             <div class="col-md-4">
+               <div class="container">              
+                   <div class="col-md-12">
+                       <h2>Favorited</h2>
+                       <div class="card" style="margin-bottom:5px">
+                           <div class="card-header">
+                             <a href="details.html">Quote</a>
+                           </div>
+                           <div class="card-block">
+                             <blockquote class="card-blockquote">
+                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                               <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                             </blockquote>
+                           </div>
+                         </div>
+                         <div class="card" style="margin-bottom:5px">
+                             <div class="card-header">
+                                 <a href="details.html">Quote</a>
+                             </div>
+                             <div class="card-block">
+                               <blockquote class="card-blockquote">
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                 <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                               </blockquote>
+                             </div>
+                           </div>
+                   </div>
                 </div>
-              </div>
-                
-                
-            </div>    
-          </div>
-           
-      </section>
+             </div>  
+             
+           </div>
+         
+    </section>
       <footer style="margin-top:10px">
       <!-- As a heading -->
       <nav class="navbar navbar-light bg-faded">

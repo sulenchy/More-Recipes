@@ -1,4 +1,4 @@
-// This will be our application entry. We'll setup our server here.
+// This is the application entry
 import http from 'http';
 import app from '../app';
 

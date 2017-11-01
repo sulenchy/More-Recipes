@@ -24,11 +24,15 @@ module.exports = {
         type:Sequelize.STRING,
         allowNull: false,
       },
-      UPvote: {
+      upvote: {
         type: Sequelize.INTEGER,
         allowNull: null,
       },
       downvote: {
+        type: Sequelize.INTEGER,
+        allowNull: null,
+      },
+      favorite: {
         type: Sequelize.INTEGER,
         allowNull: null,
       },

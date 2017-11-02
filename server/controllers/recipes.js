@@ -15,7 +15,7 @@ const post = {
         upvote: 0,
         downvote: 0,
         favorite: 0,
-        userId: req.params.userId,
+        userId: req.decoded.id,
       })
       .then(recipe => res.status(200).send(recipe))
       .catch(error => res.status(400).send(error.message));
@@ -23,13 +23,9 @@ const post = {
 
   update(req, res) {
     return recipes
-      .find({
-        where: {
-          id: req.params.recipeId,
-          userId: req.params.userId,
-        },
-      })
+      .findById(req.params.recipeId)
       .then((varRecipes) => {
+        console.log(varRecipes);
         if (!varRecipes) {
           return res.status(404).send({
             message: 'Recipe Not Found',
@@ -51,12 +47,7 @@ const post = {
 
   destroy(req, res) {
     return recipes
-      .find({
-        where: {
-          id: req.params.recipeId,
-          userId: req.params.userId,
-        },
-      })
+      .findById(req.params.recipeId)
       .then((varRecipes) => {
         if (!varRecipes) {
           return res.status(404).send({

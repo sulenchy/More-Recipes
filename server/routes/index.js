@@ -10,7 +10,7 @@ const routes = (app) => {
   // API endpoints for users to create accounts or signup
   app.post('/api/v1/users/signup', usersController.create);
 
-  // API endpoints for users to create accounts or signup
+  // API endpoints for users to create accounts or signin
   app.post('/api/v1/users/signin', usersController.signIn);
 
   // An API route that allows authenticated user to add a recipe
@@ -19,8 +19,8 @@ const routes = (app) => {
   // An API route that allows authenticated user to modify a recipe they added
   app.put('/api/v1/recipes/:recipeId', auth.verifyUser, recipesController.update);
 
-  // An API route that allows authenticated user to modify a recipe they added
-  app.put('/api/v1/recipes/:recipeId', auth.verifyUser, recipesController.destroy);
+  // An API route that allows authenticated user to delete a recipe they added
+  app.delete('/api/v1/recipes/:recipeId', auth.verifyUser, recipesController.destroy);
 
   // API endpoints to list recipes
   app.get('/api/v1/recipes', recipesController.list);

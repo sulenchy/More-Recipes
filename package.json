@@ -5,9 +5,10 @@
   "main": "lib/server.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register ./lib/test/**/*.js --exit --timeout 10000",
-    "start": "nodemon bin/.www.js --exec babel-node",
-    "build": "babel lib -d dist",
-    "serve": "node dist/server.js",
+    "start:dev": "nodemon server/app.js --exec babel-node",
+    "start": "node dist/app.js",
+    "build": "./node_modules/.bin/babel server/ -d dist --copy-files",
+    "serve": "node dist/app.js",
     "execute-script": "babel-tape-runner server.js || exit 0"
   },
   "author": "sulenchy",

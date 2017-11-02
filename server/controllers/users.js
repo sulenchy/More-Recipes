@@ -1,5 +1,6 @@
 import model from '../models';
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 const users = model.Users;
 const recipes = model.recipes;
@@ -19,12 +20,12 @@ const post = {
       .catch(error => res.status(400).send(error));
   },
   // Requests and return list of users in users table
-  // list(req, res) {
-  //   return users
-  //     .all()
-  //     .then(usersList => res.status(200).send(usersList))
-  //     .catch(error => res.status(400).send(error));
-  // },
+  listAll(req, res) {
+    return users
+      .all()
+      .then(usersList => res.status(200).send(usersList))
+      .catch(error => res.status(400).send(error));
+  },
 
   list(req, res) {
     return users
@@ -38,13 +39,12 @@ const post = {
       .catch(error => res.status(400).send(error));
   },
 
-  retrieve(req, res) {
+  signIn(req, res) {
     return users
-      .findById(req.params.userId, {
-        include: [{
-          model: recipes,
-          as: 'recipes',
-        }],
+      .findOne({
+        where: {
+          email: req.body.email,
+        },
       })
       .then((varUsers) => {
         if (!varUsers) {
@@ -52,12 +52,22 @@ const post = {
             message: 'User cannot be found',
           });
         }
+        const passwordIsCorrect = bcrypt.compareSync(req.body.password, varUsers.password);
+        if (!passwordIsCorrect) {
+          return res.status(401).send({
+            error: 'wrong username or password',
+          });
+        }
+        // encrypt jwt here
+        const token = jwt.sign({ id: varUsers.id }, 'Test');
         return res.status(200).send({
-          message: 'User logged in successfully',
+          messsage: 'login successful',
+          Token: token,
         });
-      })
-      .catch(error => res.status(400).send(error));
+      // .catch(error => res.status(400).send(error.message));
+      });
   },
+
   update(req, res) {
     return users
       .findById(req.params.userId, {
@@ -94,55 +104,6 @@ const post = {
         return varUsers
           .destroy()
           .then(() => res.status(204).send(`${req.params.userId} user record deleted `))
-          .catch(error => res.status(400).send(error));
-      })
-      .catch(error => res.status(400).send(error));
-  },
-
-  update(req, res) {
-    return TodoItem
-      .find({
-          where: {
-            id: req.params.todoItemId,
-            todoId: req.params.todoId,
-          },
-        })
-      .then(todoItem => {
-        if (!todoItem) {
-          return res.status(404).send({
-            message: 'TodoItem Not Found',
-          });
-        }
-  
-        return todoItem
-          .update({
-            content: req.body.content || todoItem.content,
-            complete: req.body.complete || todoItem.complete,
-          })
-          .then(updatedTodoItem => res.status(200).send(updatedTodoItem))
-          .catch(error => res.status(400).send(error));
-      })
-      .catch(error => res.status(400).send(error));
-  },
-  
-  destroy(req, res) {
-    return TodoItem
-      .find({
-          where: {
-            id: req.params.todoItemId,
-            todoId: req.params.todoId,
-          },
-        })
-      .then(todoItem => {
-        if (!todoItem) {
-          return res.status(404).send({
-            message: 'TodoItem Not Found',
-          });
-        }
-  
-        return todoItem
-          .destroy()
-          .then(() => res.status(204).send())
           .catch(error => res.status(400).send(error));
       })
       .catch(error => res.status(400).send(error));

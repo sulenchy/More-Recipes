@@ -52,7 +52,7 @@ module.exports = {
           key: 'id',
           as: 'usersId',
         },
-      },      
+      },
     });
   },
   down: (queryInterface, Sequelize) => {

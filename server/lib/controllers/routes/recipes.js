@@ -8,7 +8,7 @@ function getRecipes(req, res) {
   if (req.query.sort === 'upvotes' && req.query.order === 'desc') {
     Recipe.sort((recipe1, recipe2) => recipe1.upVote - recipe2.upVote);
   }
-console.log(Recipe); 
+  console.log(Recipe);
   res.json(Recipe);
 }
 

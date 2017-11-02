@@ -1,5 +1,6 @@
 // const TodoItem = require('../models').TodoItem;
 import model from '../models';
+import jwt from 'jsonwebtoken';
 
 const recipes = model.recipes;
 
@@ -16,7 +17,7 @@ const post = {
         favorite: 0,
         userId: req.params.userId,
       })
-      .then(recipe => res.status(201).send(recipe))
+      .then(recipe => res.status(200).send(recipe))
       .catch(error => res.status(400).send(error.message));
   },
 

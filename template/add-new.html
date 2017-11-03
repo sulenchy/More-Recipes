@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+      <header style="margin-bottom: 80px">
+          <!--Navbar starts here-->
+          <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <a class="navbar-brand" href="home.html">
+                    <img src="https://dcassetcdn.com/design_img/10150/1674/1674_291334_10150_thumbnail.jpg" height="60px" class="img-responsive align-top" alt="">
+                    
+                  </a>
+                
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="user-profile.html">My Profile<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="add-new.html">Add New<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="edit.html">Edit<span class="sr-only">(current)</span></a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="login.html">Logout</a>
+                      </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2" type="text" placeholder="Search for recipes">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      <div class="text-success col-md-12" role="alert">
+                              <strong>Sulenchy!</strong> logged in.
+                            </div>
+                    </form>
+                  </div>
+                </nav>
+    </header>
+  
+    <section class="container" style="margin-top:10px">
+        
+        <div class="row">
+            <div class="row">
+                <div class="col-md-8" style="margin:30px 0 60px 0;">
+                    <h2>Add New</h2>
+                    <div class="" style="margin-top:10px">
+                          
+                        <div class="col-md-12">
+                              <form>
+                                      
+                                        <div class="form-group">
+                                          <label for="disabledTextInput">Title</label>
+                                          <input type="text" id="disabledTextInput" class="form-control" placeholder="Enter Title">
+                                        </div>
+                                        <div class="form-group">
+                                              <label for="disabledTextInput">Ingredient</label>
+                                              <input type="text" id="disabledTextInput" class="form-control" placeholder="Ingredient e.g water,peper,seasoning etc">
+                                            </div>
+                                            <div class="form-group">
+                                                  <label for="disabledTextInput">Description</label>
+                                                  <textarea class="form-control" rows="5" id="comment"></textarea>
+                                            </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                      
+                                    </form>
+                        </div>
+                    </div>    
+              </div>
+          <div class="col-md-3">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-11">
+                    <h2>Favorited</h2>
+                    <div class="card" style="margin-bottom:5px">
+                        <div class="card-header">
+                          <a href="details.html">Recipe one</a>
+                        </div>
+                        <div class="card-block">
+                          <blockquote class="card-blockquote">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                          </blockquote>
+                        </div>
+                      </div>
+                      <div class="card" style="margin-bottom:5px">
+                          <div class="card-header">
+                              <a href="details.html">Recipe two</a>
+                          </div>
+                          <div class="card-block">
+                            <blockquote class="card-blockquote">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                              <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                          </div>
+                        </div>
+                </div>
+                  
+              </div>
+            </div>
+              
+              
+          </div>    
+        </div>
+         
+    </section>
+      <footer style="margin-top:10px">
+      <!-- As a heading -->
+      <nav class="navbar navbar-light bg-faded">
+            <h1 class="navbar-brand mb-0">&copy <a class="navbar-brand" href="#">Sulenchy</a> 2017</h1>
+      </nav>
+      </footer>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

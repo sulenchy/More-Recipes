@@ -11,9 +11,9 @@
     "use_env_variable": "postgres://royeegmx:PgYOQZJo7cIqBSo-d9rFJeYQNQXAIOgX@elmer.db.elephantsql.com:5432/royeegmx"
   },
   "production": {
-    "username": "royeegmx",
-    "password": "PgYOQZJo7cIqBSo-d9rFJeYQNQXAIOgX",
-    "database": "royeegmx",
+    "username": "ujnyxcjs",
+    "password": "escaQojeZCY6zZkRk5TX80SUfje7Txa3",
+    "database": "ujnyxcjs",
     "host": "elmer.db.elephantsql.com",
     "dialect": "postgres",
     "port": 5432

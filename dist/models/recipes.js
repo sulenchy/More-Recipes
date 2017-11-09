@@ -1,40 +1,40 @@
+'use strict';
 
-
-module.exports = (sequelize, DataTypes) => {
-  const Recipes = sequelize.define('recipes', {
+module.exports = function (sequelize, DataTypes) {
+  var Recipes = sequelize.define('recipes', {
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     ingredients: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     description: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     imageUrl: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     upvote: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: false
     },
     downvote: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: false
     },
     favorite: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+      allowNull: false
+    }
   });
-  Recipes.associate = (models) => {
+  Recipes.associate = function (models) {
     Recipes.belongsTo(models.Users, {
       foreignKey: 'userId',
-      onDelete: 'CASCADE',
+      onDelete: 'CASCADE'
     });
   };
 

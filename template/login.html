@@ -7,12 +7,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
   </head>
   <body>
-    <!-- header starts here-->
-    <header style="margin-bottom: 80px">
+      <header style="margin-bottom: 100px">
           <!--Navbar starts here-->
-          <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+          <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
                   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -23,93 +25,95 @@
                 
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                      </li>
+                      
                       <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
+                        <a class="nav-link" href="catalog.html">Catalog</a>
                       </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                      <input class="form-control mr-sm-2" type="text" placeholder="Search for recipes">
-                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <a class="btn btn-secondary nav-link" href="login.html">Login</a>
                     </form>
                   </div>
                 </nav>
-    </header>
-    <section class="container" style="margin-top:10px">
-        <div class="row col-md-12">
-            
-               <div class="col-md-8" style="margin-bottom: 130px">
-                   <div class="row" style="margin-top: 70px">
-                     <div class="col-md-3"></div>
-                       <div class="col-md-6 bg-inverse text-white rounded" >
-                           <h3>Login Here</h3>
-                               <div class="container">
-                                       <form>
-                                         <div class="form-group row">
-                                           <label for="inputEmail" class="col-sm-12 col-form-label">Email</label>
-                                           <div class="col-sm-12">
-                                             <input type="email" class="form-control form-control-success" id="inputEmail" placeholder="name@example.com">
-                                           </div>
-                                         </div>
-                                         <div class="form-group row">
-                                               <label for="inputPassword" class="col-sm-12 col-form-label">Password</label>
-                                               <div class="col-sm-12">
-                                                 <input type="password" class="form-control form-control-success" id="inputPassword" placeholder="e.g. !victor52b">
-                                               </div>
-                                       </div>
-                                             
-                                             <a class="btn btn-primary" href="home.html" role="button">Login</a>
-                                             <div class="form-group row">
-                                                 <label for="inputPassword" class="col-sm-8 col-form-label">Not a registered user? </label>
-                                                 <div class="col-sm-4">
-                                                     <a class="btn btn-primary" href="signup.html" role="button">Sign-Up</a>
-                                                 </div>
-               </div>
-                                       </form>
-                                     </div>
-                       </div>
-                     
-                   </div>
-               </div>
-             <div class="col-md-4">
-               <div class="container">              
-                   <div class="col-md-12">
-                       <h2>Favorited</h2>
-                       <div class="card" style="margin-bottom:5px">
-                           <div class="card-header">
-                             <a href="details.html">Quote</a>
-                           </div>
-                           <div class="card-block">
-                             <blockquote class="card-blockquote">
-                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                               <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                             </blockquote>
-                           </div>
-                         </div>
-                         <div class="card" style="margin-bottom:5px">
-                             <div class="card-header">
-                                 <a href="details.html">Quote</a>
-                             </div>
-                             <div class="card-block">
-                               <blockquote class="card-blockquote">
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                                 <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                               </blockquote>
-                             </div>
-                           </div>
-                   </div>
+      </header>
+      <section class="container" style="margin-top:10px">
+          
+          <div class="row">
+            <div class="col-md-9">
+                <div class="col-md-6"></div>
+                <div class="col-md-6" style="margin:0 auto; width:60%;padding: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                  <h3>Login Here</h3>
+                  <div class="container">
+                    <form>
+                      <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-12 col-form-label">Email</label>
+                        <div class="col-sm-12">
+                          <input type="email" class="form-control form-control-success" id="inputEmail" placeholder="name@example.com">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-12 col-form-label">Password</label>
+                        <div class="col-sm-12">
+                          <input type="password" class="form-control form-control-success" id="inputPassword" placeholder="e.g. !victor52b">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                          <div class="col-sm-12">
+                              <a class="btn btn-primary" href="home.html" role="button">Login</a>
+                          </div>
+                          <hr>
+                      </div>
+                      
+                      <div class="form-group row">
+                        <label class="col-sm-8 col-form-label">Not a registered user? <a class="btn btn-primary" href="signup.html" role="button"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign-Up</a></label>
+                        
+                      </div>
+                    </form>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-11">
+                      <h2 class="#">favorite</h2>
+                      <div class="card" style="margin-bottom:5px">
+                          <div class="card-header">
+                            <a href="details.html">Recipe one</a>
+                          </div>
+                          <div class="card-block">
+                            <blockquote class="card-blockquote">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                              <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                          </div>
+                        </div>
+                        <div class="card" style="margin-bottom:5px">
+                            <div class="card-header">
+                                <a href="details.html">Recipe two</a>
+                            </div>
+                            <div class="card-block">
+                              <blockquote class="card-blockquote">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                              </blockquote>
+                            </div>
+                          </div>
+                  </div>
+                    
                 </div>
-             </div>  
-             
-           </div>
-         
-    </section>
+              </div>
+                
+                
+            </div>    
+          </div>
+           
+      </section>
       <footer style="margin-top:10px">
       <!-- As a heading -->
-      <nav class="navbar navbar-light bg-faded">
-            <h1 class="navbar-brand mb-0">&copy <a class="navbar-brand" href="#">Sulenchy</a> 2017</h1>
+      <nav class="navbar navbar-inverse bg-inverse">
+            <h1 class="navbar-brand mb-0">&copy <a class="navbar-brand" href="#">Sulenchy</a>2017</h1>
       </nav>
       </footer>
 

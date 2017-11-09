@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-      <header style="margin-bottom: 80px">
+      <header style="margin-bottom: 100px">
           <!--Navbar starts here-->
-          <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+          <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
                   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -23,33 +23,29 @@
                 
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item active">
-                        <a class="nav-link" href="user-profile.html">My Profile<span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item active">
-                        <a class="nav-link" href="add-new.html">Add New<span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item active">
-                        <a class="nav-link" href="edit.html">Edit<span class="sr-only">(current)</span></a>
-                      </li>
                       
                       <li class="nav-item">
-                        <a class="nav-link" href="login.html">Logout</a>
+                        <a class="nav-link" href="catalog.auth.html">Catalog</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="favorite.html">My favorite</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="profile.html">profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="addnew.html">Add new</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="view.html">View</a>
                       </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                      <input class="form-control mr-sm-2" type="text" placeholder="Search for recipes">
-                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                      <div class="text-success col-md-12" role="alert">
-                              <strong>Sulenchy!</strong> logged in.
-                            </div>
+                        <a class="btn btn-secondary nav-link" href="login.html">Logout</a>
                     </form>
                   </div>
                 </nav>
-    </header>
+      </header>
   
     <section class="container" style="margin-top:10px">
         
@@ -74,7 +70,11 @@
                                                   <label for="disabledTextInput">Description</label>
                                                   <textarea class="form-control" rows="5" id="comment"></textarea>
                                             </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                            <div class="form-group">
+                                                <label for="exampleInputFile">Upload image</label>
+                                                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                                            </div>
+                                        <button type="submit" class="btn btn-primary">Add</button>
                                       
                                     </form>
                         </div>

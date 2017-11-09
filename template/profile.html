@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+      <header style="margin-bottom: 100px">
+          <!--Navbar starts here-->
+          <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <a class="navbar-brand" href="home.html">
+                    <img src="https://dcassetcdn.com/design_img/10150/1674/1674_291334_10150_thumbnail.jpg" height="60px" class="img-responsive align-top" alt="">
+                    
+                  </a>
+                
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="catalog.auth.html">Catalog</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="favorite.html">My favorite</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="profile.html">profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="addnew.html">Add new</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="view.html">View</a>
+                      </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <a class="btn btn-secondary nav-link" href="login.html">Logout</a>
+                    </form>
+                  </div>
+                </nav>
+      </header>
+      <section class="container" style="margin-top:10px">
+          
+          <div class="row">
+            <div class="col-md-9">
+              <h3>My Profile</h3>
+                <article style="margin-top:50px;width:70%; margin:0 auto;padding:50px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                  <div class="row col-md-12">
+                      <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <img src="data:image/jpeg;base64,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" alt="Profile Images" style="border-radius:50%">
+                            
+                        </div>
+                        <div class="col-md-4"></div>
+                  </div>
+                  <div class="row col-md-12">
+                      <div class="col-md-2"></div>
+                        <div class="col-md-8 text-center">
+                            <h3>Abudu Abiodun Sulaiman</h3>
+                        </div>
+                        <div class="col-md-2"></div>
+                  </div>
+                  <div class="row col-md-12">
+                      <div class="col-md-4"></div>
+                        <div class="col-md-4 text-center">
+                            <em>Lagos Nigeria</em>
+                        </div>
+                        <div class="col-md-4"></div>
+                  </div>
+                  <div class="row col-md-12 card-footer">
+                      <div class="col-md-4 text-center">
+                          <h4>200</h4>
+                          <a href="#"><em>reviews</em></a>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <h4>100</h4>
+                            <a href="favorite.html"><em>favorites</em></a>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <h4>69</h4>
+                            <a href="#"><em>recipes posted</em></a>
+                        </div>
+                  </div>
+                </article>
+            </div>
+            <div class="col-md-3">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-11">
+                      <h2 class="#">favorite</h2>
+                      <div class="card" style="margin-bottom:5px">
+                          <div class="card-header">
+                            <a href="details.auth.html">Recipe one</a>
+                          </div>
+                          <div class="card-block">
+                            <blockquote class="card-blockquote">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                              <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                          </div>
+                        </div>
+                        <div class="card" style="margin-bottom:5px">
+                            <div class="card-header">
+                                <a href="details.auth.html">Recipe two</a>
+                            </div>
+                            <div class="card-block">
+                              <blockquote class="card-blockquote">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                              </blockquote>
+                            </div>
+                          </div>
+                  </div>
+                    
+                </div>
+              </div>
+            </div>    
+          </div>
+           
+      </section>
+      <footer style="margin-top:10px">
+      <!-- As a heading -->
+      <nav class="navbar navbar-inverse bg-inverse">
+            <h1 class="navbar-brand mb-0">&copy <a class="navbar-brand" href="#">Sulenchy</a>2017</h1>
+      </nav>
+      </footer>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

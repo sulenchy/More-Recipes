@@ -16,15 +16,29 @@ const post = {
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
       })
-      .then(user => res.status(201).send(user))
-      .catch(error => res.status(400).send(error));
+      .then(user => res.status(201).send({
+        status:`Success`,
+        message: `User successfully signed up`,
+        data: user,
+      }))
+      .catch(error => res.status(400).send({
+        status: `Fail`,
+        message: `Database not accessible. Check your connection...`,
+      }));
   },
   // Requests and return list of users in users table
   listAll(req, res) {
     return users
       .all()
-      .then(usersList => res.status(200).send(usersList))
-      .catch(error => res.status(400).send(error));
+      .then(usersList => res.status(200).send({
+        status: `Success`,
+        message: `All users selected successfully`,
+        data: usersList,
+      }))
+      .catch(error => res.status(400).send({
+        status: 'Failure',
+        message: error.message,
+      }));
   },
 
   list(req, res) {
@@ -35,8 +49,15 @@ const post = {
           as: 'recipes',
         }],
       })
-      .then(varUsers => res.status(200).send(varUsers))
-      .catch(error => res.status(400).send(error));
+      .then(varUsers => res.status(200).send({
+        status: `Success`,
+        message: `Selection made successfully`,
+        data: varUsers,
+      }))
+      .catch(error => res.status(400).send({
+        status: `Failure`,
+        message: error.message
+      }));
   },
 
   signIn(req, res) {
@@ -44,27 +65,29 @@ const post = {
       .findOne({
         where: {
           email: req.body.email,
+          password: req.body.password,
         },
       })
       .then((varUsers) => {
         if (!varUsers) {
           return res.status(404).send({
+            status: `failure`,
             message: 'User cannot be found',
           });
         }
         const passwordIsCorrect = bcrypt.compareSync(req.body.password, varUsers.password);
         if (!passwordIsCorrect) {
           return res.status(401).send({
-            error: 'wrong username or password',
+            status: error.message,
+            message: `Username or password is incorrect`,
           });
         }
         // encrypt jwt here
-        const token = jwt.sign({ id: varUsers.id }, 'Test');
+        const token = jwt.sign({ id: varUsers.id }, process.env.SECRET_KEY);
         return res.status(200).send({
+          status: `Success`,
           messsage: 'login successful',
-          Token: token,
         });
-      // .catch(error => res.status(400).send(error.message));
       });
   },
 
@@ -79,6 +102,7 @@ const post = {
       .then((varUsers) => {
         if (!varUsers) {
           return res.status(404).send({
+            status: `Failure`,
             message: 'User Not Found',
           });
         }
@@ -86,10 +110,20 @@ const post = {
           .update({
             password: req.body.password || varUsers.password,
           })
-          .then(() => res.status(200).send(varUsers)) // Send back the updated todo.
-          .catch(error => res.status(400).send(error));
+          .then(() => res.status(200).send({
+            status: 'success',
+            message: `User info successfully updated`,
+            data: varUsers,
+          }))
+          .catch(error => res.status(400).send({
+            status: error.message,
+            message: `Error updating user info`,
+          }));
       })
-      .catch(error => res.status(400).send(error));
+      .catch(error => res.status(400).send({
+        status: error.message,
+        message: `Error updating user info`,
+      }));
   },
 
   destroy(req, res) {
@@ -98,15 +132,25 @@ const post = {
       .then((varUsers) => {
         if (!varUsers) {
           return res.status(400).send({
-            message: 'User Not Found',
+            status: `Error encountered`,
+            message: `User not existing`,
           });
         }
         return varUsers
           .destroy()
-          .then(() => res.status(204).send(`${req.params.userId} user record deleted `))
-          .catch(error => res.status(400).send(error));
+          .then(() => res.status(204).send({
+            status: `Success`,
+            message: `${req.params.userId} user record deleted `,
+          }))
+          .catch(error => res.status(400).send({
+            status: error.message,
+            message: `User info cannot be deleted`,
+          }));
       })
-      .catch(error => res.status(400).send(error));
+      .catch(error => res.status(400).send({
+        status: error.message,
+        message: `User info cannot be deleted`,
+      }));
   },
 };
 

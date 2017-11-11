@@ -15,6 +15,7 @@ app.set('port', port);
 routes(app);
 
 app.get('*', (req, res) => res.status(200).send({
+  status: 'Success',
   message: 'Welcome to the beginning of nothingness. Check the docs to know the appropiate route',
 }));
 

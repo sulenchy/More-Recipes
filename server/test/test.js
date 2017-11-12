@@ -6,9 +6,6 @@ import { Users, Recipes } from '../models';
 
 const assert = chai.assert;
 
-// const should = chai.should();
-// chai.use(chaiHttp);
-
 describe('More recipes Api endpoint Test', () => {
   beforeEach((done) => { // Before each test we empty the database
     Users.remove({}, (err) => {
@@ -19,7 +16,7 @@ describe('More recipes Api endpoint Test', () => {
     });
   });
 });
-describe('GET "/*", to test server ', () => {
+describe('GET "/api/v1/home", to test server ', () => {
   it('should respond with a 200 status code, status, and message', (done) => {
     request(app)
       .get('/*')

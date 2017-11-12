@@ -14,7 +14,7 @@ app.set('port', port);
 // Require our routes into the application.
 routes(app);
 
-app.get('*', (req, res) => res.status(200).send({
+app.get('/api/v1/homes', (req, res) => res.status(200).send({
   status: 'Success',
   message: 'Welcome to the beginning of nothingness. Check the docs to know the appropiate route',
 }));
